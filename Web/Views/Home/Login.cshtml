@@ -1,0 +1,113 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        function Test() {
+            var _ajax = $.ajax;
+            $.ajax = function (opt) {
+                //备份opt中error和success方法
+                var fn = {
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    },
+                    success: function (data, textStatus) {
+                    }
+                }
+                if (opt.error) {
+                    fn.error = opt.error;
+                }
+                if (opt.success) {
+                    fn.success = opt.success;
+                }
+                //扩展增强处理
+                var _opt = $.extend(opt, {
+                    beforeSend: function (xhr) {
+                        if (sessionStorage.getItem("token") != null) {
+                            xhr.setRequestHeader('Authorization', "bearer " +"asdfasf134125125asdfasfda243121234asdasdfasdfasdfsdfe2342342141");
+                        }
+                    },
+                    complete: function (xhr, ts) {
+                        console.log(xhr)
+                        if (xhr.status == 401) {
+                            window.location.href = "/webapp/errormsg.html";
+                        }
+                    }
+                });
+                return _ajax(_opt);
+            }
+            $.ajax({
+                url: "/Home/str",
+                //同步请求
+                async: false,
+                data: {}, //No Post Data
+                type: "POST",
+                //headers: { 'Authorization': "bearer " + "asdfasf134125125asdfasfda243121234" },
+                success: function (data) {
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+            });
+
+        }
+
+
+
+        ////首先备份下jquery的ajax方法  
+        //var _ajax = $.ajax;
+
+        ////重写jquery的ajax方法
+        //$.ajax = function (opt) {
+        //    //备份opt中error和success方法 
+        //    var fn = {
+        //        error: function (XMLHttpRequest, textStatus, errorThrown) { },
+        //        success: function (data, textStatus) { }
+        //    }
+        //    if (opt.error) {
+        //        fn.error = opt.error;
+        //    }
+        //    if (opt.success) {
+        //        fn.success = opt.success;
+        //    }
+
+        //    //扩展增强处理 
+        //    var _opt = $.extend(opt, {
+        //        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        //            debugger;
+        //            erro = eval("(" + XMLHttpRequest.responseText + ")");
+        //            if (erro.err_code == 500)
+        //                alert(erro.err_msg);
+        //            //错误方法增强处理 
+        //            fn.error(XMLHttpRequest, textStatus, errorThrown);
+        //        },
+        //        success: function (data, textStatus) {
+        //            //成功回调方法增强处理  
+        //            fn.success(data, textStatus);
+        //        },
+        //        beforeSend: function (xhr) {
+        //            xhr.setRequestHeader('X-Token', $.getCookie("X-Token"));
+        //            xhr.setRequestHeader('X-Client', "PC");
+        //            xhr.setRequestHeader('Content-Type', "application/json");
+        //            xhr.setRequestHeader('Authorization',  "bearer " + "asdfasf134125125asdfasfda243121234");
+        //        }
+        //    });
+        //    return _ajax(_opt);
+        //};
+        
+    </script>
+</head>
+<body>
+    <div> 
+        <input type="button" onclick="Test()" value="点击我" />
+    </div>
+</body>
+</html>

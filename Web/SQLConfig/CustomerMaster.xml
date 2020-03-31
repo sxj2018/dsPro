@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SMMSSQL>
+  <PART PGID ="CustomerMaster">
+    <SQL ID="CustomerMaster_Load">
+      <![CDATA[
+ SELECT  
+		A.ID,
+		A.KUNNR,
+		A.ZNAME1,
+		A.VTWEG,
+		A.SPART,
+		A.ZSTREET,
+		A.ZADDRESS,
+		A.ZPOSTCODE,
+		A.ZCITY,
+		A.ZTEL,
+		A.ZFAX,
+		A.ZLXR,
+		A.ZLXRDH,
+		A.Description,
+		A.Depart,
+		A.Region,
+	  --A.Payment,
+    c.text as Payment
+FROM    vw_EOrder_CusSales A
+left JOIN f_payment({%CompanyCode%}) c
+on a.ZTERM=c.id
+WHERE   1 = 1 
+--{%RecordID_Off%}  AND A.ID = {%RecordID%}  
+{%KUNNR_Off%}  AND A.KUNNR = {%KUNNR%}  
+{%VKGRP_Off%}  AND A.VKGRP = {%VKGRP%}  
+{%ZTERM_Off%}  AND A.ZTERM = {%ZTERM%}  
+and a.VKORG={%CompanyCode%}
+ ORDER BY ZNAME1
+
+      ]]>
+    </SQL>
+    <SQL ID="SearchOrder">
+      <![CDATA[
+        select * from SaleOrder
+      ]]>
+    </SQL>
+  </PART>
+</SMMSSQL>

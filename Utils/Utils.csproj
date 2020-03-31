@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA565579-97F2-4F38-B02F-B3966E3C97C0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Utils</RootNamespace>
+    <AssemblyName>Utils</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\WebAPI\bin\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Pdf">
+      <HintPath>..\WebAPI\bin\Aspose.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Slides">
+      <HintPath>..\WebAPI\bin\Aspose.Slides.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\WebAPI\bin\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\WebAPI\bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\WebAPI\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Owc11">
+      <HintPath>C:\Users\sspc\Desktop\Microsoft.Office.Interop.Owc11.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\Dll\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\Dll\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\Dll\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\Dll\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="OWC10Chart">
+      <HintPath>..\WebAPI\bin\OWC10Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ResourceManager\Sample.xml" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attr\LikeAttribute.cs" />
+    <Compile Include="BarCode\BarCodeToHTML.cs" />
+    <Compile Include="Cache\CacheExtensions.cs" />
+    <Compile Include="Cache\CacheHelper.cs" />
+    <Compile Include="Cache\CookieHelper.cs" />
+    <Compile Include="Cache\DataCache.cs" />
+    <Compile Include="Cache\ICacheManager.cs" />
+    <Compile Include="Cache\MemoryCacheManager.cs" />
+    <Compile Include="Cache\SessionHelper.cs" />
+    <Compile Include="Cache\SessionHelper2.cs" />
+    <Compile Include="Cal\CNDate.cs" />
+    <Compile Include="Chart\Assistant.cs" />
+    <Compile Include="Chart\OWCChart11.cs" />
+    <Compile Include="Chinese2PinYin\EcanConvertToCh.cs" />
+    <Compile Include="Chinese2PinYin\PinYin.cs" />
+    <Compile Include="Config\ConfigHelper.cs" />
+    <Compile Include="ConvertH\ConvertHelper.cs" />
+    <Compile Include="ConvertH\RMB.cs" />
+    <Compile Include="ConvertH\VideoConvert.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSV\CsvHelper.cs" />
+    <Compile Include="Data\BindDataControl.cs" />
+    <Compile Include="Data\DynamicQueryable.cs" />
+    <Compile Include="DEncrypt\DEncrypt.cs" />
+    <Compile Include="DEncrypt\DESEncrypt.cs" />
+    <Compile Include="DEncrypt\Encrypt.cs" />
+    <Compile Include="DEncrypt\HashEncode.cs" />
+    <Compile Include="DEncrypt\MD5.cs" />
+    <Compile Include="DEncrypt\MySecurity.cs" />
+    <Compile Include="DEncrypt\RSACryption.cs" />
+    <Compile Include="Enum\FormulaExpress.cs" />
+    <Compile Include="Enum\LikeType.cs" />
+    <Compile Include="Excel\DataToExcel.cs" />
+    <Compile Include="Excel\ExcelHelper.cs" />
+    <Compile Include="Excel\ExportExcel.cs" />
+    <Compile Include="Excel\GridViewExport.cs" />
+    <Compile Include="Exceptions\ApiExceptionAttribute.cs" />
+    <Compile Include="Extent\AjaxHelperExt.cs" />
+    <Compile Include="Extent\FileContentTypeHelper.cs" />
+    <Compile Include="Extent\FileUploadTypeHelper.cs" />
+    <Compile Include="Extent\MessageThirdPart\IThirdPartApi.cs" />
+    <Compile Include="Extent\MessageThirdPart\JiMaThirdPart.cs" />
+    <Compile Include="Extent\QueryableExt.cs" />
+    <Compile Include="Extent\ResultModel.cs" />
+    <Compile Include="Extent\UiHintExt.cs" />
+    <Compile Include="FileOperate\DirFile.cs" />
+    <Compile Include="FileOperate\FileOperate.cs" />
+    <Compile Include="FileOperate\INIFile.cs" />
+    <Compile Include="FTP\FTPClient.cs" />
+    <Compile Include="FTP\FTPHelper.cs" />
+    <Compile Include="FTP\FTPOperater.cs" />
+    <Compile Include="Grid\GridViewHelper.cs" />
+    <Compile Include="IP\IpHelper.cs" />
+    <Compile Include="Json\ConvertJson.cs" />
+    <Compile Include="Json\JsonHelper.cs" />
+    <Compile Include="JS\JsHelper.cs" />
+    <Compile Include="Mail2\ConnectCommand.cs" />
+    <Compile Include="Mail2\ConnectResponse.cs" />
+    <Compile Include="Mail2\DeleCommand.cs" />
+    <Compile Include="Mail2\ListCommand.cs" />
+    <Compile Include="Mail2\ListResponse.cs" />
+    <Compile Include="Mail2\MailHeaders.cs" />
+    <Compile Include="Mail2\MailMessageEx.cs" />
+    <Compile Include="Mail2\NoopCommand.cs" />
+    <Compile Include="Mail2\PassCommand.cs" />
+    <Compile Include="Mail2\Pop3Client.cs" />
+    <Compile Include="Mail2\Pop3Command.cs" />
+    <Compile Include="Mail2\Pop3Commands.cs" />
+    <Compile Include="Mail2\Pop3Exception.cs" />
+    <Compile Include="Mail2\Pop3ListItem.cs" />
+    <Compile Include="Mail2\Pop3Response.cs" />
+    <Compile Include="Mail2\Pop3Responses.cs" />
+    <Compile Include="Mail2\Pop3State.cs" />
+    <Compile Include="Mail2\QuitCommand.cs" />
+    <Compile Include="Mail2\RetrCommand.cs" />
+    <Compile Include="Mail2\RetrResponse.cs" />
+    <Compile Include="Mail2\RsetCommand.cs" />
+    <Compile Include="Mail2\Stat.cs" />
+    <Compile Include="Mail2\StatCommand.cs" />
+    <Compile Include="Mail2\StatResponse.cs" />
+    <Compile Include="Mail2\TopCommand.cs" />
+    <Compile Include="Mail2\UserCommand.cs" />
+    <Compile Include="Media\MediaHandler.cs" />
+    <Compile Include="Mime\MediaTypes.cs" />
+    <Compile Include="Mime\MimeEntity.cs" />
+    <Compile Include="Mime\MimeHeaders.cs" />
+    <Compile Include="Mime\MimeReader.cs" />
+    <Compile Include="Mime\QuotedPrintableEncoding.cs" />
+    <Compile Include="Net\HttpHelper.cs" />
+    <Compile Include="Net\NetHelper.cs" />
+    <Compile Include="Net\UrlOper.cs" />
+    <Compile Include="Net\WebSitePathHelper.cs" />
+    <Compile Include="Page\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\HTMLHelper.cs" />
+    <Compile Include="Page\HttpProc.cs" />
+    <Compile Include="Page\JavaScriptPlus.cs" />
+    <Compile Include="Page\PageHelper.cs" />
+    <Compile Include="Page\PageValidate.cs" />
+    <Compile Include="PDF\PDFOperation.cs" />
+    <Compile Include="Picture\ImageClass.cs" />
+    <Compile Include="Picture\ImageDown.cs" />
+    <Compile Include="Picture\ImageHelper.cs" />
+    <Compile Include="Picture\ImageUpload.cs" />
+    <Compile Include="Picture\PicDeal.cs" />
+    <Compile Include="PopMessage\MessageBox.cs" />
+    <Compile Include="PopMessage\ShowMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomOperate\BaseRandom.cs" />
+    <Compile Include="RandomOperate\RandomHelper.cs" />
+    <Compile Include="RandomOperate\RandomOperate.cs" />
+    <Compile Include="Reg\RegexHelper.cs" />
+    <Compile Include="ResourceManager\AppMessage.cs" />
+    <Compile Include="ResourceManager\ResourceManager.cs" />
+    <Compile Include="ResourceManager\ResourceManagerWrapper.cs" />
+    <Compile Include="ResourceManager\Resources.cs" />
+    <Compile Include="Seg\SegList.cs" />
+    <Compile Include="Serialize\Serialize.cs" />
+    <Compile Include="Serialize\SerializeHelper.cs" />
+    <Compile Include="Sign\SignUtil.cs" />
+    <Compile Include="SQL\SqlCommHelper.cs" />
+    <Compile Include="SQL\SQLLoaderComponent.cs" />
+    <Compile Include="Tool\CharacterUtil.cs" />
+    <Compile Include="String\QueryString.cs" />
+    <Compile Include="String\StringHelper.cs" />
+    <Compile Include="String\StringPlus.cs" />
+    <Compile Include="String\SysHelper.cs" />
+    <Compile Include="Time\DateFormat.cs" />
+    <Compile Include="Time\TimeHelper.cs" />
+    <Compile Include="Time\TimeParser.cs" />
+    <Compile Include="Tool\DelayHelper.cs" />
+    <Compile Include="Tool\ExtendIdentity.cs" />
+    <Compile Include="Tool\ParamUtil.cs" />
+    <Compile Include="Tool\Tools.cs" />
+    <Compile Include="Tool\Utility.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadDown\DownLoadHelper.cs" />
+    <Compile Include="UploadDown\FileDown.cs" />
+    <Compile Include="UploadDown\FileUp.cs" />
+    <Compile Include="UploadDown\UpLoadFiles.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerificationCode\ValidateCode.cs" />
+    <Compile Include="VerificationCode\ValidateImg.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerificationCode\YZMHelper.cs" />
+    <Compile Include="Weixin\WeiXinAuthorize.cs" />
+    <Compile Include="Weixin\WeixinHelper.cs" />
+    <Compile Include="Weixin\WxUserBase.cs" />
+    <Compile Include="Weixin\WxUserInfo.cs" />
+    <Compile Include="XML\XmlHelper.cs" />
+    <Compile Include="XML\XMLProcess.cs" />
+    <Compile Include="Zip\SharpZip.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53616</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53616/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

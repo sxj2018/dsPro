@@ -22,8 +22,7 @@ namespace Web
         {
 
 
-            //System.Web.HttpApplication app = sender as System.Web.HttpApplication;
-            //app.Context.Response.Write("哇哈哈哈哈~~~~~~~~~~~！");
+           
         }
         #region first过滤器
         //--- 利用 事件自动注册机制 来 为 当前网站的 HttpApplicaiton里的 事件 注册方法 ----------------

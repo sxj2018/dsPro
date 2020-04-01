@@ -10,7 +10,7 @@ namespace Web.AuthToken
 
         public TokenInfo()
         {
-            UserName = "j";
+            UserName = "admin";
             Pwd = "123456";
         }
         public string UserName { get; set; }

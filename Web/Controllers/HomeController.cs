@@ -4,20 +4,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web.Attribute;
 using Web.AuthToken;
+using Webone.Auth;
 
 namespace Web.Controllers
 {
     public class HomeController : Controller
     {
+        [AuthEscape]
         public ActionResult Login()
         {
             return View();
         }
-        public ActionResult str()
+        [AuthEscape]
+        public string getLogin(TokenInfo tokenInfo)
         {
-            return Content("aaaaddd");
+            var strToken = JwtHelper.GetToken(tokenInfo);
+            return strToken;
         }
+
         public ActionResult Index()
         {
             return View();

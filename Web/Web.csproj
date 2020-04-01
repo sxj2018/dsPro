@@ -151,6 +151,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attribute\AuthEscape.cs" />
     <Compile Include="Attribute\AuthFilter.cs" />
     <Compile Include="AuthToken\JwtHelper.cs" />
     <Compile Include="AuthToken\TokenInfo.cs" />

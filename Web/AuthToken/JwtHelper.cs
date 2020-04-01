@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
+using Web.AuthToken;
 
 namespace Webone.Auth
 {
@@ -97,8 +98,9 @@ namespace Webone.Auth
             }
             return isValidted;
         }
-        public static string GetToken()
+        public static string GetToken(TokenInfo tokeninfo)
         {
+            
             //载荷（payload）
             var payload = new Dictionary<string, object>
             {
@@ -107,7 +109,9 @@ namespace Webone.Auth
                 { "sub", "testJWT" }, //主题
                 { "aud", "USER" }, //用户
                 { "iat", DateTime.Now.ToString() }, //发布时间 
-                { "data" ,new { name="111",age=11,address="hubei"} }
+                //{ "data" ,new { name="111",age=11,address="hubei"} }
+                { "data" , tokeninfo }
+
             };
             //生成JWT
             string JWTString = JwtHelper.CreateJWT(payload);

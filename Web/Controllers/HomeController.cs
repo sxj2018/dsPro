@@ -21,6 +21,7 @@ namespace Web.Controllers
         public string getLogin(TokenInfo tokenInfo)
         {
             var strToken = JwtHelper.GetToken(tokenInfo);
+
             return strToken;
         }
 

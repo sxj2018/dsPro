@@ -2579,6 +2579,7 @@
     <Content Include="ElementVue\node_modules\throttle-debounce\karma.conf.js" />
     <Content Include="ElementVue\node_modules\throttle-debounce\test\index.js" />
     <Content Include="ElementVue\node_modules\throttle-debounce\throttle.js" />
+    <Content Include="ElementVue\Vue\vue.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

@@ -15,6 +15,7 @@ namespace Web.Controllers
         [AuthEscape]
         public ActionResult Login()
         {
+
             return View();
         }
         [AuthEscape]

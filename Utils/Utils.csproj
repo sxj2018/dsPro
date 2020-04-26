@@ -42,22 +42,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aspose.Cells">
-      <HintPath>..\WebAPI\bin\Aspose.Cells.dll</HintPath>
+      <HintPath>..\Code\bin\Aspose.Cells.dll</HintPath>
     </Reference>
     <Reference Include="Aspose.Pdf">
-      <HintPath>..\WebAPI\bin\Aspose.Pdf.dll</HintPath>
+      <HintPath>..\Code\bin\Aspose.Pdf.dll</HintPath>
     </Reference>
     <Reference Include="Aspose.Slides">
-      <HintPath>..\WebAPI\bin\Aspose.Slides.dll</HintPath>
+      <HintPath>..\Code\bin\Aspose.Slides.dll</HintPath>
     </Reference>
     <Reference Include="Aspose.Words">
-      <HintPath>..\WebAPI\bin\Aspose.Words.dll</HintPath>
+      <HintPath>..\Code\bin\Aspose.Words.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\WebAPI\bin\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>..\Code\bin\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
-      <HintPath>..\WebAPI\bin\itextsharp.dll</HintPath>
+      <HintPath>..\Code\bin\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Office.Interop.Owc11">
@@ -69,7 +69,7 @@
       <HintPath>bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NPOI">
-      <HintPath>..\Dll\NPOI.dll</HintPath>
+      <HintPath>..\Code\bin\NPOI.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OOXML">
       <HintPath>..\Dll\NPOI.OOXML.dll</HintPath>
